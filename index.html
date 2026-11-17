@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#0b0e13" />
+<meta name="description" content="Semua website Sean dalam satu tempat — top up diamond MLBB, joki rank, top up Robux, streaming anime subtitle Indonesia, Spotify Premium, jasa order Kopi Kenangan, dan download video. Kunjungi disean.my.id." />
+<link rel="canonical" href="https://disean.my.id/" />
+<meta property="og:image" content="https://disean.my.id/thumbs/sean-top-up.jpg" />
+<link rel="icon" href="data:," />
+<title>Sean — Semua Website | disean.my.id</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#0b0e13;
+    --bg-soft:#10141c;
+    --card:#141922;
+    --card-hover:#1a212f;
+    --line:#232c3d;
+    --line-soft:#1c2432;
+    --text:#f2f5f9;
+    --muted:#9aa7ba;
+    --muted-2:#6f7d92;
+    --accent:#f0b93e;
+    --accent-ink:#1a1405;
+    --accent-soft:rgba(240,185,62,.12);
+    --radius:18px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ overflow-x:clip; }
+  body{
+    margin:0;
+    background:
+      radial-gradient(560px 320px at 50% -80px, rgba(240,185,62,.10), transparent 65%),
+      var(--bg);
+    color:var(--text);
+    font-family:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{ color:inherit; }
+  button{ font-family:inherit; cursor:pointer; }
+
+  .wrap{
+    max-width:480px;
+    margin:0 auto;
+    padding:34px 18px 28px;
+    width:100%;
+  }
+
+  /* ---------- Header ---------- */
+  header{ text-align:center; }
+  .monogram{
+    width:76px; height:76px;
+    margin:0 auto 14px;
+    border-radius:22px;
+    display:grid; place-items:center;
+    background:linear-gradient(145deg, #ffd968, var(--accent) 55%, #d99a17);
+    color:var(--accent-ink);
+    font-size:2.35rem; font-weight:800; line-height:1;
+    box-shadow:0 10px 28px rgba(240,185,62,.22), inset 0 1px 0 rgba(255,255,255,.45);
+    letter-spacing:-.02em;
+  }
+  .site-label{
+    font-family:"Space Mono", ui-monospace, monospace;
+    font-size:.82rem;
+    color:var(--accent);
+    letter-spacing:.04em;
+    margin:0 0 8px;
+  }
+  h1{
+    font-size:1.72rem;
+    font-weight:800;
+    letter-spacing:-.02em;
+    line-height:1.15;
+    margin:0 0 10px;
+  }
+  .subtitle{
+    color:var(--muted);
+    font-size:.95rem;
+    line-height:1.55;
+    margin:0 auto;
+    max-width:36ch;
+  }
+  .share-btn{
+    margin-top:20px;
+    display:inline-flex; align-items:center; gap:9px;
+    min-height:46px;
+    padding:11px 20px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--bg-soft);
+    color:var(--text);
+    font-size:.92rem; font-weight:700;
+    transition:background .15s ease, border-color .15s ease, transform .1s ease;
+  }
+  .share-btn:hover{ background:var(--card-hover); border-color:#2e3a4f; }
+  .share-btn:active{ transform:scale(.97); }
+  .share-btn svg{ width:17px; height:17px; flex:none; }
+
+  /* ---------- Sections ---------- */
+  section{ margin-top:30px; }
+  .group-title{
+    display:flex; align-items:center; gap:12px;
+    font-size:.78rem; font-weight:800;
+    letter-spacing:.16em;
+    color:var(--muted);
+    margin:0 2px 13px;
+    text-transform:uppercase;
+  }
+  .group-title::after{
+    content:""; flex:1; height:1px; background:var(--line-soft);
+  }
+  .cards{ display:flex; flex-direction:column; gap:12px; }
+
+  /* ---------- Card ---------- */
+  .card{
+    position:relative;
+    display:block;
+    background:var(--card);
+    border:1px solid var(--line-soft);
+    border-radius:var(--radius);
+    overflow:hidden;
+    text-decoration:none;
+    transition:background .15s ease, border-color .15s ease, transform .1s ease;
+  }
+  .thumb{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:20 / 9;
+    object-fit:cover;
+    background:var(--bg-soft);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .card-row{
+    display:flex; align-items:center; gap:15px;
+    padding:15px 16px 16px;
+  }
+  .card:hover{ background:var(--card-hover); border-color:var(--line); }
+  .card:active{ transform:scale(.985); }
+  .card:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .card-body{ flex:1; min-width:0; }
+  .card-name{
+    font-size:1.06rem; font-weight:800; letter-spacing:-.01em;
+    margin:0 0 3px;
+    display:flex; align-items:center; gap:7px;
+  }
+  .card-desc{
+    color:var(--muted);
+    font-size:.875rem; line-height:1.45;
+    margin:0 0 6px;
+  }
+  .card-domain{
+    font-family:"Space Mono", ui-monospace, monospace;
+    font-size:.76rem;
+    color:var(--accent);
+    margin:0;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .card-side{
+    flex:none; display:flex; flex-direction:column; align-items:flex-end; gap:8px;
+    align-self:stretch; justify-content:space-between;
+  }
+  .arrow{
+    color:var(--muted-2);
+    display:grid; place-items:center;
+    width:24px; height:24px;
+  }
+  .arrow svg{ width:18px; height:18px; }
+  .copy-btn{
+    width:38px; height:38px;
+    display:grid; place-items:center;
+    border-radius:11px;
+    border:1px solid var(--line-soft);
+    background:var(--bg-soft);
+    color:var(--muted);
+    transition:color .15s ease, border-color .15s ease, background .15s ease;
+    position:relative; z-index:2;
+  }
+  .copy-btn:hover{ color:var(--text); border-color:var(--line); background:var(--card-hover); }
+  .copy-btn:active{ transform:scale(.93); }
+  .copy-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .copy-btn svg{ width:16px; height:16px; pointer-events:none; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:36px;
+    padding-top:20px;
+    border-top:1px solid var(--line-soft);
+    text-align:center;
+    color:var(--muted-2);
+    font-size:.82rem; line-height:1.6;
+  }
+  footer .foot-domain{
+    font-family:"Space Mono", ui-monospace, monospace;
+    color:var(--muted);
+  }
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position:fixed;
+    left:50%; bottom:calc(22px + env(safe-area-inset-bottom));
+    transform:translate(-50%, 16px);
+    background:#eef2f7; color:#10141c;
+    font-size:.88rem; font-weight:700;
+    padding:12px 20px;
+    border-radius:999px;
+    box-shadow:0 12px 32px rgba(0,0,0,.45);
+    opacity:0; pointer-events:none;
+    transition:opacity .22s ease, transform .22s ease;
+    z-index:50;
+    white-space:nowrap;
+  }
+  .toast.show{ opacity:1; transform:translate(-50%, 0); }
+
+  @media (max-width:360px){
+    .wrap{ padding-left:14px; padding-right:14px; }
+    h1{ font-size:1.55rem; }
+    .card-row{ padding:13px 13px 14px; gap:12px; }
+  }
+
+  /* ---------- Landscape / layar lebar ---------- */
+  @media (min-width:700px){
+    .wrap{ max-width:720px; padding-top:44px; }
+    .cards{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  }
+  @media (min-width:1040px){
+    .wrap{ max-width:1060px; }
+    .cards{ grid-template-columns:repeat(3, 1fr); gap:16px; }
+    section{ margin-top:36px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="monogram" aria-hidden="true">S</div>
+      <p class="site-label">disean.my.id</p>
+      <h1>Semua Website Sean</h1>
+      <p class="subtitle">Semua layanan dalam satu tempat. Ketuk salah satu untuk membuka websitenya.</p>
+      <button class="share-btn" id="shareBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Bagikan halaman ini
+      </button>
+    </header>
+
+    <main>
+      <!-- GAME -->
+      <section aria-labelledby="grup-game">
+        <h2 class="group-title" id="grup-game">Game</h2>
+        <div class="cards">
+
+          <a class="card" href="https://topup.disean.my.id/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/sean-top-up.jpg" alt="Tampilan website Sean Top Up" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">Sean Top Up</span>
+              <span class="card-desc" style="display:block">Top Up Diamond &amp; Weekly Diamond Pass MLBB</span>
+              <span class="card-domain" style="display:block">topup.disean.my.id</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://topup.disean.my.id/" aria-label="Salin link Sean Top Up" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+          <a class="card" href="https://joki.disean.my.id/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/seanjoki.jpg" alt="Tampilan website SeanJoki" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">SeanJoki</span>
+              <span class="card-desc" style="display:block">Joki Rank &amp; Joki Gendong MLBB</span>
+              <span class="card-domain" style="display:block">joki.disean.my.id</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://joki.disean.my.id/" aria-label="Salin link SeanJoki" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+          <a class="card" href="https://robux.disean.my.id/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/sean-robux.jpg" alt="Tampilan website Sean Robux" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">Sean Robux</span>
+              <span class="card-desc" style="display:block">Top Up Robux Via Login &amp; Username</span>
+              <span class="card-domain" style="display:block">robux.disean.my.id</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://robux.disean.my.id/" aria-label="Salin link Sean Robux" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- HIBURAN -->
+      <section aria-labelledby="grup-hiburan">
+        <h2 class="group-title" id="grup-hiburan">Hiburan</h2>
+        <div class="cards">
+
+          <a class="card" href="https://sukaindo.me/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/sukaindo.jpg" alt="Tampilan website SukaIndo" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">SukaIndo</span>
+              <span class="card-desc" style="display:block">Streaming Anime Subtitle Indonesia</span>
+              <span class="card-domain" style="display:block">sukaindo.me</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://sukaindo.me/" aria-label="Salin link SukaIndo" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+          <a class="card" href="https://spotprem.me/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/spotprem.jpg" alt="Tampilan website SpotPrem" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">SpotPrem</span>
+              <span class="card-desc" style="display:block">Akun Spotify Premium Sharing</span>
+              <span class="card-domain" style="display:block">spotprem.me</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://spotprem.me/" aria-label="Salin link SpotPrem" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- LAYANAN LAIN -->
+      <section aria-labelledby="grup-lain">
+        <h2 class="group-title" id="grup-lain">Layanan Lain</h2>
+        <div class="cards">
+
+          <a class="card" href="https://janlupngops.fun/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/janlupngops.jpg" alt="Tampilan website JanLupNgops" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">JanLupNgops</span>
+              <span class="card-desc" style="display:block">Jasa Order Kopi Kenangan Diskon 50%</span>
+              <span class="card-domain" style="display:block">janlupngops.fun</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://janlupngops.fun/" aria-label="Salin link JanLupNgops" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+          <a class="card" href="https://antigap.tech/" target="_blank" rel="noopener">
+            <img class="thumb" src="thumbs/antigap.jpg" alt="Tampilan website AntiGap" width="960" height="432" loading="lazy" decoding="async" />
+            <span class="card-row">
+            <span class="card-body">
+              <span class="card-name">AntiGap</span>
+              <span class="card-desc" style="display:block">Download Video YouTube, TikTok, IG &amp; Facebook</span>
+              <span class="card-domain" style="display:block">antigap.tech</span>
+            </span>
+            <span class="card-side">
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+              <button class="copy-btn" type="button" data-copy="https://antigap.tech/" aria-label="Salin link AntiGap" title="Salin link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year">2026</span> <span class="foot-domain">disean.my.id</span> — Semua website di atas dikelola Sean.
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Link tersalin!</div>
+
+<script>
+  (function () {
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var toast = document.getElementById('toast');
+    var toastTimer = null;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+    }
+
+    function copyText(text, done) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+      } else {
+        fallbackCopy(text);
+        done();
+      }
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    // Copy per card — stop the card link from opening.
+    var copyBtns = document.querySelectorAll('.copy-btn');
+    for (var i = 0; i < copyBtns.length; i++) {
+      copyBtns[i].addEventListener('click', function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        copyText(this.getAttribute('data-copy'), function () { showToast('Link tersalin!'); });
+      });
+    }
+
+    // Share button — Web Share API, fallback: copy the hub URL.
+    document.getElementById('shareBtn').addEventListener('click', function () {
+      var shareData = {
+        title: 'Sean — Semua Website | disean.my.id',
+        text: 'Semua website Sean dalam satu tempat.',
+        url: 'https://disean.my.id/'
+      };
+      if (navigator.share) {
+        navigator.share(shareData).catch(function () {});
+      } else {
+        copyText('https://disean.my.id/', function () { showToast('Link tersalin!'); });
+      }
+    });
+  })();
+</script>
+</body>
+</html>
