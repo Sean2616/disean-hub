@@ -3,403 +3,655 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="color-scheme" content="dark" />
-<meta name="theme-color" content="#0b0e13" />
+<meta name="theme-color" content="#faae2b" />
 <meta name="description" content="Semua website Sean dalam satu tempat — top up diamond MLBB, joki rank, top up Robux, streaming anime subtitle Indonesia, Spotify Premium, jasa order Kopi Kenangan, dan download video. Kunjungi disean.my.id." />
 <link rel="canonical" href="https://disean.my.id/" />
 <meta property="og:image" content="https://disean.my.id/thumbs/sean-top-up.jpg" />
-<link rel="icon" href="data:," />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='16' fill='%23faae2b' stroke='%23000' stroke-width='5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='36' fill='%23000'%3ES%3C/text%3E%3C/svg%3E" />
 <title>Sean — Semua Website | disean.my.id</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <style>
-  :root{
-    color-scheme: dark;
-    --bg:#0b0e13;
-    --bg-soft:#10141c;
-    --card:#141922;
-    --card-hover:#1a212f;
-    --line:#232c3d;
-    --line-soft:#1c2432;
-    --text:#f2f5f9;
-    --muted:#9aa7ba;
-    --muted-2:#6f7d92;
-    --accent:#f0b93e;
-    --accent-ink:#1a1405;
-    --accent-soft:rgba(240,185,62,.12);
-    --radius:18px;
+  :root {
+    --bg: #f4efea;
+    --dot: #d5ccc3;
+    --ink: #000000;
+    --muted: #4b5563;
+    --card: #ffffff;
+    --cream: #fff9eb;
+    --amber: #faae2b;
+    --pink: #f582ae;
+    --cyan: #8bd3dd;
+    --mint: #b8f2cf;
+    --lavender: #d8b4fe;
   }
-  *{ box-sizing:border-box; }
-  html,body{ overflow-x:clip; }
-  body{
-    margin:0;
-    background:
-      radial-gradient(560px 320px at 50% -80px, rgba(240,185,62,.10), transparent 65%),
-      var(--bg);
-    color:var(--text);
-    font-family:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+  * { box-sizing: border-box; }
+  html, body { overflow-x: clip; margin: 0; padding: 0; }
+  body {
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--dot) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    color: var(--ink);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-  a{ color:inherit; }
-  button{ font-family:inherit; cursor:pointer; }
+  a { color: inherit; text-decoration: none; }
+  button, input { font-family: inherit; }
+  button { cursor: pointer; }
+  .mono { font-family: "Space Mono", ui-monospace, monospace; }
 
-  .wrap{
-    max-width:480px;
-    margin:0 auto;
-    padding:34px 18px 28px;
-    width:100%;
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 20px 14px 44px;
   }
-
-  /* ---------- Header ---------- */
-  header{ text-align:center; }
-  .monogram{
-    width:76px; height:76px;
-    margin:0 auto 14px;
-    border-radius:22px;
-    display:grid; place-items:center;
-    background:linear-gradient(145deg, #ffd968, var(--accent) 55%, #d99a17);
-    color:var(--accent-ink);
-    font-size:2.35rem; font-weight:800; line-height:1;
-    box-shadow:0 10px 28px rgba(240,185,62,.22), inset 0 1px 0 rgba(255,255,255,.45);
-    letter-spacing:-.02em;
-  }
-  .site-label{
-    font-family:"Space Mono", ui-monospace, monospace;
-    font-size:.82rem;
-    color:var(--accent);
-    letter-spacing:.04em;
-    margin:0 0 8px;
-  }
-  h1{
-    font-size:1.72rem;
-    font-weight:800;
-    letter-spacing:-.02em;
-    line-height:1.15;
-    margin:0 0 10px;
-  }
-  .subtitle{
-    color:var(--muted);
-    font-size:.95rem;
-    line-height:1.55;
-    margin:0 auto;
-    max-width:36ch;
-  }
-  .share-btn{
-    margin-top:20px;
-    display:inline-flex; align-items:center; gap:9px;
-    min-height:46px;
-    padding:11px 20px;
-    border-radius:999px;
-    border:1px solid var(--line);
-    background:var(--bg-soft);
-    color:var(--text);
-    font-size:.92rem; font-weight:700;
-    transition:background .15s ease, border-color .15s ease, transform .1s ease;
-  }
-  .share-btn:hover{ background:var(--card-hover); border-color:#2e3a4f; }
-  .share-btn:active{ transform:scale(.97); }
-  .share-btn svg{ width:17px; height:17px; flex:none; }
-
-  /* ---------- Sections ---------- */
-  section{ margin-top:30px; }
-  .group-title{
-    display:flex; align-items:center; gap:12px;
-    font-size:.78rem; font-weight:800;
-    letter-spacing:.16em;
-    color:var(--muted);
-    margin:0 2px 13px;
-    text-transform:uppercase;
-  }
-  .group-title::after{
-    content:""; flex:1; height:1px; background:var(--line-soft);
-  }
-  .cards{ display:flex; flex-direction:column; gap:12px; }
-
-  /* ---------- Card ---------- */
-  .card{
-    position:relative;
-    display:block;
-    background:var(--card);
-    border:1px solid var(--line-soft);
-    border-radius:var(--radius);
-    overflow:hidden;
-    text-decoration:none;
-    transition:background .15s ease, border-color .15s ease, transform .1s ease;
-  }
-  .thumb{
-    display:block;
-    width:100%;
-    height:auto;
-    aspect-ratio:20 / 9;
-    object-fit:cover;
-    background:var(--bg-soft);
-    border-bottom:1px solid var(--line-soft);
-  }
-  .card-row{
-    display:flex; align-items:center; gap:15px;
-    padding:15px 16px 16px;
-  }
-  .card:hover{ background:var(--card-hover); border-color:var(--line); }
-  .card:active{ transform:scale(.985); }
-  .card:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
-  .card-body{ flex:1; min-width:0; }
-  .card-name{
-    font-size:1.06rem; font-weight:800; letter-spacing:-.01em;
-    margin:0 0 3px;
-    display:flex; align-items:center; gap:7px;
-  }
-  .card-desc{
-    color:var(--muted);
-    font-size:.875rem; line-height:1.45;
-    margin:0 0 6px;
-  }
-  .card-domain{
-    font-family:"Space Mono", ui-monospace, monospace;
-    font-size:.76rem;
-    color:var(--accent);
-    margin:0;
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-  }
-  .card-side{
-    flex:none; display:flex; flex-direction:column; align-items:flex-end; gap:8px;
-    align-self:stretch; justify-content:space-between;
-  }
-  .arrow{
-    color:var(--muted-2);
-    display:grid; place-items:center;
-    width:24px; height:24px;
-  }
-  .arrow svg{ width:18px; height:18px; }
-  .copy-btn{
-    width:38px; height:38px;
-    display:grid; place-items:center;
-    border-radius:11px;
-    border:1px solid var(--line-soft);
-    background:var(--bg-soft);
-    color:var(--muted);
-    transition:color .15s ease, border-color .15s ease, background .15s ease;
-    position:relative; z-index:2;
-  }
-  .copy-btn:hover{ color:var(--text); border-color:var(--line); background:var(--card-hover); }
-  .copy-btn:active{ transform:scale(.93); }
-  .copy-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
-  .copy-btn svg{ width:16px; height:16px; pointer-events:none; }
-
-  /* ---------- Footer ---------- */
-  footer{
-    margin-top:36px;
-    padding-top:20px;
-    border-top:1px solid var(--line-soft);
-    text-align:center;
-    color:var(--muted-2);
-    font-size:.82rem; line-height:1.6;
-  }
-  footer .foot-domain{
-    font-family:"Space Mono", ui-monospace, monospace;
-    color:var(--muted);
+  @media (min-width: 640px) {
+    .wrap { padding: 32px 22px 56px; }
   }
 
-  /* ---------- Toast ---------- */
-  .toast{
-    position:fixed;
-    left:50%; bottom:calc(22px + env(safe-area-inset-bottom));
-    transform:translate(-50%, 16px);
-    background:#eef2f7; color:#10141c;
-    font-size:.88rem; font-weight:700;
-    padding:12px 20px;
-    border-radius:999px;
-    box-shadow:0 12px 32px rgba(0,0,0,.45);
-    opacity:0; pointer-events:none;
-    transition:opacity .22s ease, transform .22s ease;
-    z-index:50;
-    white-space:nowrap;
+  .neo-card {
+    background: var(--card);
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    border-radius: 16px;
   }
-  .toast.show{ opacity:1; transform:translate(-50%, 0); }
+  .neo-btn {
+    border: 2.5px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    border-radius: 11px;
+    font-weight: 800;
+    transition: transform .1s ease, box-shadow .1s ease, background-color .15s ease;
+  }
+  .neo-btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000; }
+  .neo-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 #000; }
 
-  @media (max-width:360px){
-    .wrap{ padding-left:14px; padding-right:14px; }
-    h1{ font-size:1.55rem; }
-    .card-row{ padding:13px 13px 14px; gap:12px; }
+  /* Hero */
+  .hero {
+    background: var(--amber);
+    padding: 18px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (min-width: 768px) {
+    .hero { padding: 28px 30px; }
+  }
+  .hero-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 768px) {
+    .hero-top {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .monogram {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    display: grid; place-items: center;
+    font-size: 1.9rem; font-weight: 800;
+    flex-shrink: 0;
+  }
+  @media (min-width: 640px) {
+    .monogram { width: 74px; height: 74px; font-size: 2.3rem; border-radius: 18px; }
+  }
+  .badges {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 9px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: .7rem; font-weight: 800;
+    box-shadow: 2px 2px 0 #000;
+    background: #fff;
+    white-space: nowrap;
+  }
+  .dot-live {
+    width: 8px; height: 8px; border-radius: 999px;
+    background: #16a34a; border: 1.5px solid #000;
+    display: inline-block;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+  }
+  @media (min-width: 640px) {
+    h1 { font-size: 2.15rem; }
+  }
+  .subtitle {
+    margin: 5px 0 0;
+    font-size: .84rem;
+    font-weight: 600;
+    color: rgba(0,0,0,.82);
+    line-height: 1.45;
+  }
+  @media (min-width: 640px) {
+    .subtitle { font-size: .95rem; }
+  }
+  .hero-actions {
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .share-btn {
+    background: #fff;
+    color: #000;
+    padding: 10px 16px;
+    font-size: .82rem;
+    display: inline-flex; align-items: center; gap: 8px;
+    white-space: nowrap;
+  }
+  .share-btn svg { width: 16px; height: 16px; }
+
+  /* Filter & Search Toolbar */
+  .toolbar {
+    margin-top: 16px;
+    background: var(--cream);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media (min-width: 768px) {
+    .toolbar {
+      margin-top: 20px;
+      padding: 14px 18px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0 #000;
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-size: .78rem;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: all .12s ease;
+  }
+  .tab-btn.active {
+    background: #000;
+    color: var(--amber);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+  }
+  .search-wrap {
+    position: relative;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .search-wrap { width: 250px; }
+  }
+  .search-inp {
+    width: 100%;
+    padding: 8px 12px 8px 34px;
+    border: 2.5px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    font-size: .82rem;
+    font-weight: 700;
+    outline: none;
+  }
+  .search-inp:focus {
+    background: #fffdf5;
+    box-shadow: 3px 3px 0 #000;
+  }
+  .search-ico {
+    position: absolute;
+    left: 11px; top: 50%; transform: translateY(-50%);
+    width: 15px; height: 15px; pointer-events: none;
   }
 
-  /* ---------- Landscape / layar lebar ---------- */
-  @media (min-width:700px){
-    .wrap{ max-width:720px; padding-top:44px; }
-    .cards{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  /* Sections */
+  section.group-sec { margin-top: 24px; }
+  @media (min-width: 768px) { section.group-sec { margin-top: 30px; } }
+  .group-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 12px;
   }
-  @media (min-width:1040px){
-    .wrap{ max-width:1060px; }
-    .cards{ grid-template-columns:repeat(3, 1fr); gap:16px; }
-    section{ margin-top:36px; }
+  .group-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 12px;
+    border: 2.5px solid #000;
+    border-radius: 9px;
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    box-shadow: 3px 3px 0 #000;
   }
-  @media (prefers-reduced-motion: reduce){
-    *{ transition:none !important; }
+  .group-line {
+    flex: 1;
+    height: 2.5px;
+    background: #000;
+    border-radius: 2px;
+    opacity: .18;
   }
+
+  /* Bento Grids — Zero Empty Columns! */
+  .grid-3, .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 680px) {
+    .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  }
+  @media (min-width: 1020px) {
+    .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  }
+
+  /* Shortcut Card (Semantic <article>, no nested button inside <a>!) */
+  .site-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .site-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 #000;
+  }
+  .browser-bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 7px 11px;
+    border-bottom: 2.5px solid #000;
+    font-size: .7rem;
+    font-weight: 700;
+  }
+  .dots { display: flex; gap: 5px; flex-shrink: 0; }
+  .dots i {
+    width: 9px; height: 9px; border-radius: 999px;
+    border: 1.5px solid #000; display: block;
+  }
+  .thumb-wrap {
+    display: block;
+    border-bottom: 2.5px solid #000;
+    background: var(--cream);
+    overflow: hidden;
+  }
+  .thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 20 / 9;
+    object-fit: cover;
+    transition: transform .25s ease;
+  }
+  .site-card:hover .thumb { transform: scale(1.025); }
+
+  .card-main {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 15px 15px;
+  }
+  .card-info { flex: 1; min-width: 0; }
+  .card-title-link {
+    font-size: 1.08rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #000;
+  }
+  .card-title-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .card-desc {
+    margin: 4px 0 10px;
+    font-size: .83rem;
+    font-weight: 600;
+    color: var(--muted);
+    line-height: 1.42;
+  }
+  .domain-tag {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 3px 8px;
+    background: var(--cream);
+    border: 2px solid #000;
+    border-radius: 7px;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+  .card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-self: stretch;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .open-pill {
+    width: 32px; height: 32px;
+    border-radius: 9px;
+    border: 2px solid #000;
+    background: var(--amber);
+    display: grid; place-items: center;
+    box-shadow: 2px 2px 0 #000;
+  }
+  .open-pill svg { width: 16px; height: 16px; }
+  .copy-btn {
+    position: relative;
+    z-index: 2;
+    width: 36px; height: 36px;
+    border-radius: 9px;
+    border: 2px solid #000;
+    background: #fff;
+    box-shadow: 2px 2px 0 #000;
+    display: grid; place-items: center;
+    transition: background .12s ease, transform .1s ease;
+  }
+  .copy-btn:hover { background: var(--mint); }
+  .copy-btn:active { transform: translate(2px, 2px); box-shadow: 0 0 0 #000; }
+  .copy-btn svg { width: 15px; height: 15px; pointer-events: none; }
+
+  .empty-state {
+    display: none;
+    margin-top: 22px;
+    padding: 28px 16px;
+    text-align: center;
+    font-weight: 700;
+    background: var(--cream);
+  }
+
+  footer {
+    margin-top: 34px;
+    padding: 16px;
+    text-align: center;
+    font-size: .78rem;
+    font-weight: 700;
+    background: #fff;
+  }
+
+  .toast {
+    position: fixed;
+    left: 50%; bottom: calc(20px + env(safe-area-inset-bottom));
+    transform: translate(-50%, 16px);
+    background: #000;
+    color: var(--amber);
+    border: 2.5px solid #fff;
+    font-size: .84rem;
+    font-weight: 800;
+    padding: 10px 18px;
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.3);
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+    z-index: 80;
+    white-space: nowrap;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
 </style>
 </head>
 <body>
   <div class="wrap">
-
-    <header>
-      <div class="monogram" aria-hidden="true">S</div>
-      <p class="site-label">disean.my.id</p>
-      <h1>Semua Website Sean</h1>
-      <p class="subtitle">Semua layanan dalam satu tempat. Ketuk salah satu untuk membuka websitenya.</p>
-      <button class="share-btn" id="shareBtn" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        Bagikan halaman ini
-      </button>
+    <header class="neo-card hero">
+      <div class="hero-top">
+        <div class="brand-row">
+          <div class="monogram" aria-hidden="true">S</div>
+          <div>
+            <div class="badges">
+              <span class="badge mono"><span class="dot-live"></span> disean.my.id</span>
+              <span class="badge" style="background:var(--pink)">⚡ 7 Website Aktif</span>
+            </div>
+            <h1>Semua Website Sean</h1>
+            <p class="subtitle">Semua layanan resmi Sean dalam satu pintu. Ketuk kartu untuk langsung membuka websitenya!</p>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="neo-btn share-btn" id="shareBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Bagikan Halaman
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <div class="neo-card toolbar">
+      <div class="tabs" role="tablist" aria-label="Filter kategori website">
+        <button type="button" class="tab-btn active" data-filter="all">🌟 Semua (7)</button>
+        <button type="button" class="tab-btn" data-filter="game">🎮 Game (3)</button>
+        <button type="button" class="tab-btn" data-filter="hiburan">🎬 Hiburan (2)</button>
+        <button type="button" class="tab-btn" data-filter="lain">⚡ Layanan Lain (2)</button>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+        <input type="search" id="searchInput" class="search-inp" placeholder="Cari layanan (MLBB, Robux, Kopi...)" autocomplete="off" />
+      </div>
+    </div>
+
+    <main id="hubMain">
       <!-- GAME -->
-      <section aria-labelledby="grup-game">
-        <h2 class="group-title" id="grup-game">Game</h2>
-        <div class="cards">
+      <section class="group-sec" data-group="game" aria-labelledby="grup-game">
+        <div class="group-head">
+          <h2 class="group-pill" id="grup-game" style="background:var(--amber)">🎮 Game</h2>
+          <div class="group-line"></div>
+        </div>
+        <div class="grid-3">
+          <article class="site-card" data-search="sean top up diamond weekly diamond pass mlbb mobile legends topup.disean.my.id">
+            <div class="browser-bar" style="background:#fff3d1">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">topup.disean.my.id</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/sean-top-up.jpg" alt="Tampilan website Sean Top Up" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://topup.disean.my.id/" target="_blank" rel="noopener">Sean Top Up</a>
+                <p class="card-desc">Top Up Diamond &amp; Weekly Diamond Pass MLBB</p>
+                <span class="domain-tag mono">🌐 topup.disean.my.id</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://topup.disean.my.id/" aria-label="Salin link Sean Top Up" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
-          <a class="card" href="https://topup.disean.my.id/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/sean-top-up.jpg" alt="Tampilan website Sean Top Up" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">Sean Top Up</span>
-              <span class="card-desc" style="display:block">Top Up Diamond &amp; Weekly Diamond Pass MLBB</span>
-              <span class="card-domain" style="display:block">topup.disean.my.id</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://topup.disean.my.id/" aria-label="Salin link Sean Top Up" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
+          <article class="site-card" data-search="sean joki rank gendong mabar mlbb mobile legends joki.disean.my.id">
+            <div class="browser-bar" style="background:#ffe4ec">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">joki.disean.my.id</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/seanjoki.jpg" alt="Tampilan website Sean Joki" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://joki.disean.my.id/" target="_blank" rel="noopener">Sean Joki</a>
+                <p class="card-desc">Joki Rank &amp; Joki Gendong MLBB</p>
+                <span class="domain-tag mono">🌐 joki.disean.my.id</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" style="background:var(--pink)" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://joki.disean.my.id/" aria-label="Salin link Sean Joki" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
-          <a class="card" href="https://joki.disean.my.id/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/seanjoki.jpg" alt="Tampilan website SeanJoki" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">Sean Joki</span>
-              <span class="card-desc" style="display:block">Joki Rank &amp; Joki Gendong MLBB</span>
-              <span class="card-domain" style="display:block">joki.disean.my.id</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://joki.disean.my.id/" aria-label="Salin link SeanJoki" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
-
-          <a class="card" href="https://robux.disean.my.id/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/sean-robux.jpg" alt="Tampilan website Sean Robux" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">Sean Robux</span>
-              <span class="card-desc" style="display:block">Top Up Robux Via Login &amp; Username</span>
-              <span class="card-domain" style="display:block">robux.disean.my.id</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://robux.disean.my.id/" aria-label="Salin link Sean Robux" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
-
+          <article class="site-card" data-search="sean robux roblox plus login username robux.disean.my.id">
+            <div class="browser-bar" style="background:#e0f7fa">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">robux.disean.my.id</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/sean-robux.jpg" alt="Tampilan website Sean Robux" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://robux.disean.my.id/" target="_blank" rel="noopener">Sean Robux</a>
+                <p class="card-desc">Top Up Robux Via Login &amp; Username</p>
+                <span class="domain-tag mono">🌐 robux.disean.my.id</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" style="background:var(--cyan)" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://robux.disean.my.id/" aria-label="Salin link Sean Robux" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- HIBURAN -->
-      <section aria-labelledby="grup-hiburan">
-        <h2 class="group-title" id="grup-hiburan">Hiburan</h2>
-        <div class="cards">
+      <section class="group-sec" data-group="hiburan" aria-labelledby="grup-hiburan">
+        <div class="group-head">
+          <h2 class="group-pill" id="grup-hiburan" style="background:var(--lavender)">🎬 Hiburan</h2>
+          <div class="group-line"></div>
+        </div>
+        <div class="grid-2">
+          <article class="site-card" data-search="sukaindo streaming anime subtitle indonesia nonton sukaindo.me">
+            <div class="browser-bar" style="background:#f3e8ff">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">sukaindo.me</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/sukaindo.jpg" alt="Tampilan website SukaIndo" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://sukaindo.me/" target="_blank" rel="noopener">SukaIndo</a>
+                <p class="card-desc">Streaming Anime Subtitle Indonesia</p>
+                <span class="domain-tag mono">🌐 sukaindo.me</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" style="background:var(--lavender)" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://sukaindo.me/" aria-label="Salin link SukaIndo" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
-          <a class="card" href="https://sukaindo.me/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/sukaindo.jpg" alt="Tampilan website SukaIndo" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">SukaIndo</span>
-              <span class="card-desc" style="display:block">Streaming Anime Subtitle Indonesia</span>
-              <span class="card-domain" style="display:block">sukaindo.me</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://sukaindo.me/" aria-label="Salin link SukaIndo" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
-
-          <a class="card" href="https://spotprem.me/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/spotprem.jpg" alt="Tampilan website SpotPrem" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">SpotPrem</span>
-              <span class="card-desc" style="display:block">Akun Spotify Premium Sharing</span>
-              <span class="card-domain" style="display:block">spotprem.me</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://spotprem.me/" aria-label="Salin link SpotPrem" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
-
+          <article class="site-card" data-search="spotprem akun spotify premium sharing musik lirik spotprem.me">
+            <div class="browser-bar" style="background:#dcfce7">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">spotprem.me</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/spotprem.jpg" alt="Tampilan website SpotPrem" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://spotprem.me/" target="_blank" rel="noopener">SpotPrem</a>
+                <p class="card-desc">Akun Spotify Premium Sharing &amp; Pemutar Musik</p>
+                <span class="domain-tag mono">🌐 spotprem.me</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" style="background:var(--mint)" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://spotprem.me/" aria-label="Salin link SpotPrem" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- LAYANAN LAIN -->
-      <section aria-labelledby="grup-lain">
-        <h2 class="group-title" id="grup-lain">Layanan Lain</h2>
-        <div class="cards">
+      <section class="group-sec" data-group="lain" aria-labelledby="grup-lain">
+        <div class="group-head">
+          <h2 class="group-pill" id="grup-lain" style="background:var(--cyan)">⚡ Layanan Lain</h2>
+          <div class="group-line"></div>
+        </div>
+        <div class="grid-2">
+          <article class="site-card" data-search="janlupngops jasa order kopi kenangan diskon 50 wifi janlupngops.fun">
+            <div class="browser-bar" style="background:#fff3d1">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">janlupngops.fun</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/janlupngops.jpg" alt="Tampilan website JanLupNgops" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://janlupngops.fun/" target="_blank" rel="noopener">JanLupNgops</a>
+                <p class="card-desc">Jasa Order Kopi Kenangan Diskon 50%</p>
+                <span class="domain-tag mono">🌐 janlupngops.fun</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" style="background:var(--amber)" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://janlupngops.fun/" aria-label="Salin link JanLupNgops" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
-          <a class="card" href="https://janlupngops.fun/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/janlupngops.jpg" alt="Tampilan website JanLupNgops" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">JanLupNgops</span>
-              <span class="card-desc" style="display:block">Jasa Order Kopi Kenangan Diskon 50%</span>
-              <span class="card-domain" style="display:block">janlupngops.fun</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://janlupngops.fun/" aria-label="Salin link JanLupNgops" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
-
-          <a class="card" href="https://antigap.tech/" target="_blank" rel="noopener">
-            <img class="thumb" src="thumbs/antigap.jpg" alt="Tampilan website AntiGap" width="960" height="432" loading="lazy" decoding="async" />
-            <span class="card-row">
-            <span class="card-body">
-              <span class="card-name">AntiGap</span>
-              <span class="card-desc" style="display:block">Download Video YouTube, TikTok, IG &amp; Facebook</span>
-              <span class="card-domain" style="display:block">antigap.tech</span>
-            </span>
-            <span class="card-side">
-              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
-              <button class="copy-btn" type="button" data-copy="https://antigap.tech/" aria-label="Salin link AntiGap" title="Salin link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </span>
-            </span>
-          </a>
-
+          <article class="site-card" data-search="antigap download video youtube tiktok ig instagram facebook antigap.tech">
+            <div class="browser-bar" style="background:#e0f2fe">
+              <span class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></span>
+              <span class="mono">antigap.tech</span>
+            </div>
+            <div class="thumb-wrap">
+              <img class="thumb" src="thumbs/antigap.jpg" alt="Tampilan website AntiGap" width="960" height="432" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-main">
+              <div class="card-info">
+                <a class="card-title-link" href="https://antigap.tech/" target="_blank" rel="noopener">AntiGap</a>
+                <p class="card-desc">Download Video YouTube, TikTok, IG &amp; Facebook</p>
+                <span class="domain-tag mono">🌐 antigap.tech</span>
+              </div>
+              <div class="card-actions">
+                <span class="open-pill" style="background:var(--cyan)" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+                <button class="copy-btn" type="button" data-copy="https://antigap.tech/" aria-label="Salin link AntiGap" title="Salin link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
+
+      <div id="emptyState" class="neo-card empty-state">Tidak ada layanan yang cocok dengan pencarianmu.</div>
     </main>
 
-    <footer>
-      © <span id="year">2026</span> <span class="foot-domain">disean.my.id</span> — Semua website di atas dikelola Sean.
+    <footer class="neo-card mono">
+      © <span id="year">2026</span> <b>disean.my.id</b> — Semua website di atas dikelola Sean.
     </footer>
   </div>
 
@@ -408,7 +660,6 @@
 <script>
   (function () {
     document.getElementById('year').textContent = new Date().getFullYear();
-
     var toast = document.getElementById('toast');
     var toastTimer = null;
     function showToast(msg) {
@@ -417,50 +668,66 @@
       clearTimeout(toastTimer);
       toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
     }
-
     function copyText(text, done) {
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
-      } else {
-        fallbackCopy(text);
-        done();
-      }
+      } else { fallbackCopy(text); done(); }
     }
     function fallbackCopy(text) {
       var ta = document.createElement('textarea');
-      ta.value = text;
-      ta.setAttribute('readonly', '');
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
       try { document.execCommand('copy'); } catch (e) {}
       document.body.removeChild(ta);
     }
 
-    // Copy per card — stop the card link from opening.
-    var copyBtns = document.querySelectorAll('.copy-btn');
-    for (var i = 0; i < copyBtns.length; i++) {
-      copyBtns[i].addEventListener('click', function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        copyText(this.getAttribute('data-copy'), function () { showToast('Link tersalin!'); });
+    document.querySelectorAll('.copy-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        copyText(this.getAttribute('data-copy'), function () { showToast('📋 Link berhasil disalin!'); });
       });
+    });
+
+    document.getElementById('shareBtn').addEventListener('click', function () {
+      var shareData = { title: 'Sean — Semua Website | disean.my.id', text: 'Semua website Sean dalam satu tempat.', url: 'https://disean.my.id/' };
+      if (navigator.share) navigator.share(shareData).catch(function () {});
+      else copyText('https://disean.my.id/', function () { showToast('📋 Link disean.my.id tersalin!'); });
+    });
+
+    // Filter & Search
+    var activeFilter = 'all';
+    var searchInp = document.getElementById('searchInput');
+    var sections = document.querySelectorAll('.group-sec');
+    var emptyEl = document.getElementById('emptyState');
+
+    function applyFilter() {
+      var q = (searchInp.value || '').trim().toLowerCase();
+      var totalShown = 0;
+      sections.forEach(function (sec) {
+        var grp = sec.getAttribute('data-group');
+        var groupMatch = (activeFilter === 'all' || activeFilter === grp);
+        var visibleInSec = 0;
+        sec.querySelectorAll('.site-card').forEach(function (card) {
+          var textMatch = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+          var show = groupMatch && textMatch;
+          card.style.display = show ? '' : 'none';
+          if (show) { visibleInSec++; totalShown++; }
+        });
+        sec.style.display = visibleInSec > 0 ? '' : 'none';
+      });
+      emptyEl.style.display = totalShown === 0 ? 'block' : 'none';
     }
 
-    // Share button — Web Share API, fallback: copy the hub URL.
-    document.getElementById('shareBtn').addEventListener('click', function () {
-      var shareData = {
-        title: 'Sean — Semua Website | disean.my.id',
-        text: 'Semua website Sean dalam satu tempat.',
-        url: 'https://disean.my.id/'
-      };
-      if (navigator.share) {
-        navigator.share(shareData).catch(function () {});
-      } else {
-        copyText('https://disean.my.id/', function () { showToast('Link tersalin!'); });
-      }
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        activeFilter = this.getAttribute('data-filter');
+        applyFilter();
+      });
     });
+    searchInp.addEventListener('input', applyFilter);
   })();
 </script>
 </body>
